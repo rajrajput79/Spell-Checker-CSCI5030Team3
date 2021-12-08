@@ -53,20 +53,21 @@ def irish_word_suggestions(word): # Main function to give suggestions for Irish
     irish_suggestions = []
     if (word.isalnum() == False):
          return word
-    else:    
-        if (len(word)<=4):
+    else: 
+           if (len(word)<=4):
             for key,value in irish_term_list.items():
                 edit = nltk.edit_distance(word, key)
                 if (edit == 1):
                     irish_suggestions.append(key)
             return irish_suggestions
-        else:
-            if (5<=len(word)<=12):
-                for key,value in irish_term_list.items():
-                    edit = nltk.edit_distance(word, key)
-                    if (edit == 1 or edit == 2):
-                        irish_suggestions.append(key)              
-                return irish_suggestions
+        else
+           (len(word)<=4):
+            for key,value in irish_term_list.items():
+                edit = nltk.edit_distance(word, key)
+                if (edit == 1):
+                    irish_suggestions.append(key)
+            return irish_suggestions
+
     
 def spellCheck(text,languagetowrite): # Main function
     suggestions=[]
@@ -77,22 +78,6 @@ def spellCheck(text,languagetowrite): # Main function
             print(i)
             word= i + ":"
             e=english_word_suggestions(i)
-            print("e")
-            print(e)
-            x= ','.join([str(element) for element in e])
-            print("x")
-            print(x)
-            word=word + x + "\n"
-            suggestions.append(word)
-            # appending suggestion if there are more than a single word 
-            print(suggestions)
-            print("suggestions")
-        return suggestions
-    else:
-        for i in words:
-            print(i)
-            word= i + ":"
-            e=irish_word_suggestions(i)
             print("e")
             print(e)
             x= ','.join([str(element) for element in e])
