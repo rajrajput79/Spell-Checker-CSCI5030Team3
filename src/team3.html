@@ -22,11 +22,6 @@
 				</form>
 			</div>
 
-			<!--<div class="row">
-				<label for="Output" id="result" class="font"></label>
-				<textarea type="textarea" name="Output" id="Output" cols="85" rows="12"
-					style="border:solid 2px Black; margin-left:50px; cursor: text; background-color: #668484;font-family:Georgia,serif;font-size:15px;"></textarea>
-				</div>-->
 			<div id="buttonPosition">
 				<br></br>
 				<br></br>
@@ -164,40 +159,14 @@
 		else if(language == "Turkish")
 		{
 			document.getElementById("sent").innerHTML = "CMetin girme";
-			//document.getElementById("result").innerHTML = "Çıktı";
 			document.getElementById("suggestion").innerHTML = "Öneri";
 			document.getElementById("Check").innerHTML = "Çek";
 			document.getElementById("Clear").innerHTML = "Berrak";
-			//document.getElementById("Confirm").innerHTML = "Onaylamak";
 			document.getElementById("lbldropdown").innerHTML = "Kullanıcı Arabirimi Dili";
 			document.getElementById("lbldropdown2").innerHTML = "Yazma Dili";
 		}
 
 	}
-
-	/**function sendData()
-	{
-		var ifinputempty = document.getElementById("Input").value;
-		if(ifinputempty !="")
-		{
-			var selectedText = document.getElementById("Input").value;
-			tempvariable = selectedText;
-			langaugetowrite=setwritinglangauge();
-
-			$.ajax({
-				url: '/',
-				type: 'POST',
-				data: { 'word': selectedText, 'language':langaugetowrite },
-			})
-				.done(function (data) {
-					Output.textContent = data;
-				});
-		}
-		else
-		{
-			alert("Please enter some text in Input");
-		}
-	}**/
 
 	function setwritinglangauge()
 	{
