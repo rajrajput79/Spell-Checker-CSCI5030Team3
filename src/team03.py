@@ -53,20 +53,20 @@ def irish_word_suggestions(word): # Main function to give suggestions for Irish
     irish_suggestions = []
     if (word.isalnum() == False):
          return word
-    else: 
-           if (len(word)<=4):
+    else:    
+        if (len(word)<=4):
             for key,value in irish_term_list.items():
                 edit = nltk.edit_distance(word, key)
                 if (edit == 1):
                     irish_suggestions.append(key)
             return irish_suggestions
-        else
-           (len(word)<=4):
-            for key,value in irish_term_list.items():
-                edit = nltk.edit_distance(word, key)
-                if (edit == 1):
-                    irish_suggestions.append(key)
-            return irish_suggestions
+        else:
+            if (5<=len(word)<=12):
+                for key,value in irish_term_list.items():
+                    edit = nltk.edit_distance(word, key)
+                    if (edit == 1 or edit == 2):
+                        irish_suggestions.append(key)              
+                return irish_suggestions
 
     
 def spellCheck(text,languagetowrite): # Main function
