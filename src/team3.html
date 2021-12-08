@@ -97,7 +97,7 @@
 				data: { 'word': selectedText, 'language':langaugetowrite },
 			})
 				.done(function (data) {
-					var suggestions = data;
+					var suggestions = data.Incorrectword;
 					SuggestionList.textContent = data;
 				});
 		}
@@ -112,6 +112,8 @@
 		//document.getElementById("Output").innerHTML="";
 		document.getElementById("SuggestionList").innerHTML="";
 	}
+	
+	
 
 	function setData() {
 		document.getElementById("sent").innerHTML = "Enter text";
