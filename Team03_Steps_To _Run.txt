@@ -25,3 +25,5 @@ Note: Folder creation of static, Image and Images is important
      static: Image
      Images: Background Image
      templates: html ( to render from python).
+
+
